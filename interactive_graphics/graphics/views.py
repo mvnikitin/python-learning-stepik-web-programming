@@ -5,7 +5,7 @@ import plotly.graph_objs as go
 
 
 def interactive_graphic(request):
-    x = list(range(-10, 11))
+    x = list(range(-10, 15))
     y = [2 * val for val in x]
     fig = go.Figure(data=go.Scatter(x=x, y=y, mode='lines+markers'))
     fig.update_layout(title='Интерактивный график функции y = 2x',
