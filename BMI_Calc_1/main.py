@@ -1,7 +1,7 @@
-def calculate_bmi(weight, height_cm):
+def calculate_bmi(weight, height):
     try:
         weight = float(weight)
-        height = float(height_cm) / 100
+        height = float(height) / 100
 
         if height == 0:
             raise ZeroDivisionError
@@ -17,12 +17,12 @@ def calculate_bmi(weight, height_cm):
 def main():
     try:
         weight = float(input("Введите вес (кг): "))
-        height_cm = float(input("Введите рост (см): "))
+        height = float(input("Введите рост (см): "))
 
-        if weight <= 0 or height_cm <= 0:
+        if weight <= 0 or height <= 0:
             raise ValueError
 
-        bmi = calculate_bmi(weight, height_cm)
+        bmi = calculate_bmi(weight, height)
 
         if bmi is not None:
             print(f"Индекс массы тела (BMI): {bmi:.2f}")
